@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import './ApiPokemon.css';
 import axios from 'axios';
 
 
@@ -14,12 +15,16 @@ export const ApiPokemon = (props) => {
 
 
   return (
-    <div>
+    <div className='api'>
       <button onClick={callApi} className="btn btn-primary mt-4">Buscar Pokemon</button>
 
       {
         pokemones.map((item, index) => {
-          return <p key={index}>{index} {item.name}</p>
+          return (
+            <ul key={index}>
+              <li>{index} {item.name}</li>
+            </ul>
+          )
         })
       }
     </div>
