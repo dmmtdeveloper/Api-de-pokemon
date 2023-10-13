@@ -7,7 +7,7 @@ export const ApiPokemon = (props) => {
   const [pokemones, setPokemones]= useState ([])
 
   const callApi = async () => {
-   const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=870&offset=0")
+   const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0")
    const lista = response.data.results;
    setPokemones(lista)
   }
